@@ -1,0 +1,9 @@
+{
+  "name": "socket-chat",
+  "version": "1.0.0",
+  "description": "basic chat via socket io",
+  "main": "index.js",
+  "repository": "git@github.com:tfpractice/socket-chat.git",
+  "author": "theory friction practice <jackson.brebnor@gmail.com>",
+  "license": "MIT"
+}
