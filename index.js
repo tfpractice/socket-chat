@@ -2,11 +2,8 @@ const app = require('express')();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-// const exp = require('express').createServer();
-
-// app.createServer();
-
-// const http = require('http').Server(app);
+// const exp = require('express').createServer(); app.createServer(); const http
+// = require('http').Server(app);
 
 app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/index.html`);
@@ -14,6 +11,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+  socket.on('chat message', (msg) => {
+    console.log(`message: ${msg}`);
+  });
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
